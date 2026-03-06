@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NoneSoul.fun</title>
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Outfit:wght@800;900&family=Rajdhani:wght@700&family=Teko:wght@600&family=VT323&display=swap" rel="stylesheet">
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body oncontextmenu="return false" onselectstart="return false" ondragstart="return false">
+
+<div id="enter-screen">
+<div class="enter-content">
+<div class="enter-logo"><i class="fa-solid fa-ghost"></i></div>
+<h1>Kliknij, aby wejść</h1>
+<p>nonesoul.fun</p>
+<div class="enter-ring"></div>
+</div>
+</div>
+
+<audio id="bg-music" src="music.mp3" loop></audio>
+
+<div class="music-player glass-card">
+<div class="music-info">
+<div class="music-title">Fighting My Demons</div>
+<div class="music-time" id="music-time-display">0:00 / 0:00</div>
+</div>
+<div class="music-controls">
+<button id="play-pause-btn"><i class="fa-solid fa-play"></i></button>
+<div class="volume-container">
+<button id="mute-btn"><i class="fa-solid fa-volume-high"></i></button>
+<input type="range" id="volume-slider" min="0" max="1" step="0.01">
+</div>
+</div>
+</div>
+
+<canvas id="particles"></canvas>
+<div class="background-effects">
+<div class="glow-center"></div>
+<div class="glow-secondary"></div>
+<div class="grid-bg"></div>
+</div>
+
+<nav class="navbar">
+<div class="container nav-container">
+<div class="logo"><i class="fa-solid fa-ghost"></i> NoneSoul</div>
+<button class="hamburger" id="hamburger"><span></span><span></span><span></span></button>
+<ul class="nav-menu" id="nav-menu">
+<li><a href="#" class="active">Strona Główna</a></li>
+<li><a href="#games">Gry</a></li>
+<li><a href="#sponsored">Sponsorowane</a></li>
+<li><a href="#contact">Kontakt</a></li>
+<li><a href="leaki.html">Leaki</a></li>
+</ul>
+<a href="https://dc.nonesoul.fun" target="_blank" class="btn-panel"><i class="fa-solid fa-lock"></i> Strefa Klienta</a>
+</div>
+</nav>
+
+<header class="hero">
+<div class="container hero-content">
+<div class="hero-badge animate-in">
+<i class="fa-solid fa-briefcase"></i> Portfolio 2026
+</div>
+<h1 class="hero-title animate-in delay-1">Główna strona <span class="gradient-text">nonesoul.fun</span></h1>
+<p class="hero-subtitle animate-in delay-2">Oficjalna strona projektu <strong>#nonesouldev</strong>. Tworzymy rozwiązania nowej generacji.</p>
+<div class="hero-buttons animate-in delay-3">
+<a href="https://dc.nonesoul.fun" target="_blank" class="btn-primary btn-glow"><i class="fa-brands fa-discord"></i> Skontaktuj się</a>
+</div>
+<div class="hero-stats animate-in delay-4">
+<div class="stat">
+<span class="stat-number" data-target="0">0</span>
+<span class="stat-label">Klientów</span>
+</div>
+<div class="stat-divider"></div>
+<div class="stat">
+<span class="stat-number" data-target="24">0</span><span class="stat-percent">/7</span>
+<span class="stat-label">Support</span>
+</div>
+</div>
+</div>
+</header>
+
+<section id="games" class="portfolio">
+<div class="container">
+<div class="section-header">
+<span class="section-label"><i class="fa-solid fa-gamepad"></i> HOBBY</span>
+<h2 class="section-title">Ulubione Gry</h2>
+</div>
+
+<a href="https://steamcommunity.com/id/nonesouldev/" target="_blank" style="text-decoration: none;">
+<div class="server-banner animate-in delay-1">
+<div class="banner-video-container">
+<video autoplay loop muted playsinline class="banner-video">
+<source src="klip1.mp4" type="video/mp4">
+</video>
+<div class="banner-overlay"></div>
+</div>
+<div class="banner-content">
+<h2 class="game-title cs-style">CS2</h2>
+</div>
+</div>
+</a>
+
+<a href="https://namemc.com/profile/Nonesoul.1" target="_blank" style="text-decoration: none;">
+<div class="server-banner animate-in delay-2">
+<div class="banner-video-container">
+<video autoplay loop muted playsinline class="banner-video">
+<source src="klip2.mp4" type="video/mp4">
+</video>
+<div class="banner-overlay"></div>
+</div>
+<div class="banner-content">
+<h2 class="game-title mc-style">Minecraft</h2>
+</div>
+</div>
+</a>
+
+</div>
+</section>
+
+<section id="sponsored" class="portfolio" style="padding-top: 0;">
+<div class="container">
+<div class="section-header">
+<span class="section-label"><i class="fa-solid fa-star"></i> PARTNERZY</span>
+<h2 class="section-title">Sponsorowane</h2>
+</div>
+
+<div class="server-banner animate-in delay-1">
+<div class="banner-video-container">
+<video autoplay loop muted playsinline class="banner-video">
+<source src="filmik.mp4" type="video/mp4">
+</video>
+<div class="banner-overlay"></div>
+</div>
+<div class="banner-content">
+<h2 class="game-title sponsor-style">wpcraft.eu</h2>
+<div class="server-status-text">
+Graj razem z <span id="player-count" class="count-gold">...</span> graczami
+</div>
+</div>
+</div>
+
+<div class="server-banner animate-in delay-2">
+<div class="banner-video-container">
+<video autoplay loop muted playsinline class="banner-video">
+<source src="klip2.mp4" type="video/mp4">
+</video>
+<div class="banner-overlay"></div>
+</div>
+<div class="banner-content">
+<h2 class="game-title sponsor-style">skihub.pl</h2>
+<div id="players-skihub" class="server-status-text">Pobieranie danych...</div>
+</div>
+</div>
+
+</div>
+</section>
+
+<section id="contact" class="team">
+<div class="container">
+<div class="section-header">
+<span class="section-label"><i class="fa-solid fa-user"></i> WŁAŚCICIEL</span>
+<h2 class="section-title">Kontakt</h2>
+<p class="section-desc">Napisz do nas na Discordzie</p>
+</div>
+<div class="single-member-container">
+<a href="https://discordapp.com/users/1374482488839114892" target="_blank" class="glass-card team-card team-link float-card">
+<div class="card-glow"></div>
+<div class="avatar-wrapper">
+<div class="avatar-ring"></div>
+<div class="avatar"><img src="profil.webp" alt="Avatar"></div>
+<div class="status-dot"></div>
+</div>
+<h3>nonesouldev</h3>
+<p class="role">Owner & Developer</p>
+<div class="discord-status"><i class="fa-brands fa-discord"></i> Kliknij, aby dodać</div>
+</a>
+</div>
+</div>
+</section>
+
+<footer class="footer">
+<div class="container">
+<div class="footer-content">
+<div class="footer-logo"><i class="fa-solid fa-ghost"></i> NoneSoul</div>
+<p>&copy; 2026 NoneSoul.fun - Wszelkie prawa zastrzeżone.</p>
+<div class="secure-badge"><i class="fa-solid fa-lock"></i> Secure Connection</div>
+</div>
+</div>
+</footer>
+
+<div id="cookie-banner" class="cookie-banner">
+<div class="cookie-content">
+<i class="fa-solid fa-cookie-bite cookie-icon"></i>
+<p>Ta strona wykorzystuje pliki cookies.</p>
+<button id="accept-cookies" class="btn-accept">AKCEPTUJĘ</button>
+</div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
